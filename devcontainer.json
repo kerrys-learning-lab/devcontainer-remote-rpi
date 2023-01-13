@@ -1,0 +1,13 @@
+{
+	"name": "Ubuntu",
+	"dockerComposeFile": [
+		"docker-compose.yml"
+	],
+	"workspaceFolder": "/workspace",
+	"remoteUser": "vscode",
+	"service": "dev",
+	"extensions": [
+		"redhat.ansible"
+	],
+	"initializeCommand": "./.devcontainer/lifecycle-scripts/initialize.sh"
+}
