@@ -40,7 +40,7 @@ RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | d
 RUN export POETRY_HOME=/opt/poetry && \
     export POETRY_VERSION=1.3.0 && \
     curl -sSL https://install.python-poetry.org | python3 - && \
-    echo "export PATH=/opt/poetry/bin:$PATH" > /etc/profile.d/poetry.sh
+    ln -sf /opt/poetry/bin/poetry /bin/poetry
 
 RUN pip install --no-warn-script-location  \
                 ansible \
