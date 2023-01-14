@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  dev:
+    build:
+      context: .
+    entrypoint: bash -c "while true; do sleep 1000; done"
+    volumes:
+      - source: ..
+        target: /workspace
+        type: bind
+      - source: /var/run/docker.sock
+        target: /var/run/docker.sock
+        type: bind
+      - source: ${HOME}/.ssh
+        target: /home/vscode/.ssh
+        type: bind
