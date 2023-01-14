@@ -47,4 +47,4 @@ RUN pip install --no-warn-script-location  \
                 ansible-lint \
                 commitizen
 
-RUN ansible-galaxy install gepaplexx.microk8s
+RUN su - vscode -c "ansible-galaxy install gepaplexx.microk8s"
