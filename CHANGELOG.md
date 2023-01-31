@@ -1,3 +1,9 @@
+## 0.3.0 (2023-01-31)
+
+### Feat
+
+- Add ArgoCD and Helm CLIs
+
 ## 0.2.0 (2023-01-30)
 
 ### Feat
