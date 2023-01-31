@@ -53,6 +53,20 @@ RUN mkdir /tmp/k9s && \
     sudo install -o root -g root -m 0755 /tmp/k9s/k9s /usr/local/bin/k9s && \
     rm -rf /tmp/k9s
 
+# -- ArgoCD CLI
+RUN cd /tmp && \
+    curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64 && \
+    install -o root -g root -m 555 argocd-linux-amd64 /usr/local/bin/argocd && \
+    rm -f /tmp/argocd-linux-amd64
+
+# -- Helm CLI
+RUN mkdir /tmp/helm && \
+    cd /tmp/helm && \
+    curl -LO https://get.helm.sh/helm-v3.11.0-linux-amd64.tar.gz && \
+    tar xzf helm-v3.11.0-linux-amd64.tar.gz && \
+    install -o root -g root -m 555 */helm /usr/local/bin/helm && \
+    rm -rf /tmp/helm
+
 # -- Poetry
 RUN export POETRY_HOME=/opt/poetry && \
     export POETRY_VERSION=1.3.0 && \

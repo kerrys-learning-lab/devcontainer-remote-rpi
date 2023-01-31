@@ -10,5 +10,10 @@
 		"ms-azuretools.vscode-docker",
 		"redhat.ansible"
 	],
-	"initializeCommand": "./.devcontainer/lifecycle-scripts/initialize.sh"
+	"initializeCommand": "./.devcontainer/execute-lifecycle-phase.sh initialize",
+	"onCreateCommand": "./.devcontainer/execute-lifecycle-phase.sh create",
+	"updateContentCommand": "./.devcontainer/execute-lifecycle-phase.sh update-content",
+	"postCreateCommand": "./.devcontainer/execute-lifecycle-phase.sh post-create",
+	"postStartCommand": "./.devcontainer/execute-lifecycle-phase.sh post-start",
+	"postAttachCommand": "./.devcontainer/execute-lifecycle-phase.sh post-attach"
 }
