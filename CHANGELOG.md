@@ -1,3 +1,9 @@
+## 0.3.1 (2023-01-31)
+
+### Fix
+
+- Missing lifecycle script
+
 ## 0.3.0 (2023-01-31)
 
 ### Feat
